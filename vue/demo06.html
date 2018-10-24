@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<!--<script src="https://unpkg.com/vue/dist/vue.js"></script>
+		<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>-->
+		<script src="js/vue.js"></script>
+		<script src="js/vue-router.js"></script>
+		<style>
+			us {
+			  display: grid;
+			  grid-template-columns: auto 1fr;
+			  grid-template-rows: auto;
+			  grid-template-areas: 
+			    "header header"
+			    "nav content"
+			    "nav helper"
+			    ;
+			}
+			
+			h2 {
+			  grid-area: header;
+			}
+			
+			.us__nav {
+			  grid-area: nav;
+			  border: 1px dotted;
+			  margin-right: .75rem;
+			  padding: .3rem;
+			}
+			.us__content {
+			  grid-area: content;
+			}
+			.us__content--helper {
+			  grid-area: helper;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="app">
+		  <h1>Nested Named Views</h1>
+		  <router-view></router-view>
+		</div>
+	</body>
+	<script>
+		const Nav = {
+			template:`
+				<div>
+				
+					<div>目录</div>
+					<ul>
+						<li><router-link to="/all/one">1</router-link></li>
+						<li><router-link to="/all/two">2</router-link></li>
+						
+					</ul>
+				</div>
+			`
+		}
+		const All = {
+			template: `
+		<div class="us">
+			<h1>all---</h1>
+		  <Nav/>
+		  <router-view></router-view>
+		  <router-view  name="test"></router-view>
+		  <router-view  name="helper"></router-view>
+		</div>
+		  `,
+		  components: { Nav }
+		}
+		
+		const One = {
+			template: `
+		<div>
+			<h3>我是one</h3>
+		</div>
+		  `
+		}
+		
+		const Two = {
+			template: `
+		<div>
+			<h3>我是two</h3>
+		</div>
+		  `
+		}
+		
+		const Three = {
+			template: `
+		<div>
+			<h3>Three</h3>
+		</div>
+		  `
+		}
+		const Test = {
+			template: `
+		<div>
+			<h3>试试看</h3>
+		</div>
+		  `
+		}
+		const router = new VueRouter({
+		  //mode: 'history',
+		  routes: [
+		    { path: '/all',
+		      // You could also have named views at tho top
+		      component: All,
+		      children: [{
+		      	path: 'one',
+		        components: {
+		        	default: One,
+		        	test: Test
+		        }
+		      }, {
+		      	path: 'two',
+		        components: {
+		        	default: Two,
+		         	helper: Three
+		        }
+		      }]
+		    }
+		  ]
+		})
+		
+		//router.push('/settings/emails')
+		
+		new Vue({
+			router,
+			el: '#app'
+		})
+		
+		/*const app = new Vue({
+		  router
+		}).$mount('#app')*/
+	</script>
+</html>

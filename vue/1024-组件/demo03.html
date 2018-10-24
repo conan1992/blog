@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<ul>
+				<button @click="change(tab.name)" v-for="tab in tabs" :tab="tab" :key="tab.id">{{tab.name}}</button>
+			</ul>
+			<component v-bind:is="a"></component>
+		</div>
+	</body>
+	<script>
+		Vue.component('tab-a', {
+			template: `<span>tab-a</span>`
+		})
+		Vue.component('tab-b', {
+			template: `<span>b</span>`
+		})
+		Vue.component('tab-c', {
+			template: `<span>c</span>`
+		})
+		Vue.component('btn', {
+			props:['tab'],
+			template: "<button>{{tab.name}}</button>"
+		})
+		var vm = new Vue({
+			data: {
+				message: '',
+				message02: '',
+				checked: true,
+				title: '123',
+				todos: [{
+					title: 'title1',
+					con: 'con1'
+				},{
+					title: 'title2',
+					con: 'con2'
+				},{
+					title: 'title3',
+					con: 'con3'
+				}],
+				tabs: [{
+					id: 0,
+					name: 'a'
+				},{
+					id: 1,
+					name: 'b'
+				},{
+					id: 2,
+					name: 'c'
+				}],
+				postFontSize: 1,
+				fuck: 'a'
+			},
+			computed: {
+				a: function(){
+					return 'tab-'+this.fuck
+				}
+			},
+			methods: {
+				change: function(name){
+					this.fuck = name
+				}
+			}
+		}).$mount("#app")
+	</script>
+</html>

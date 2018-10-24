@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<input placeholder="edit me" v-model="message"/>
+			<p>{{message}}</p>
+			<span>Multiline message is:</span>
+			<p style="white-space: pre-line;">{{ message02 }}</p>
+			<br>
+			<textarea v-model="message02" placeholder="add multiple lines"></textarea>
+			<input type="checkbox" id="checkbox" v-model="checked">
+			<label for="checkbox">{{ checked }}</label>
+		</div>
+	</body>
+	<script>
+		
+		var vm = new Vue({
+			data: {
+				message: '',
+				message02: '',
+				checked: true
+			}
+		}).$mount("#app")
+	</script>
+</html>

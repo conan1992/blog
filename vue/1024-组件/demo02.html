@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<com v-for="todo in todos" :todo="todo" :a="postFontSize" @changefs="postFontSize+=$event"></com>
+			
+		</div>
+	</body>
+	<script>
+		Vue.component('com', {
+			props: ['todo','a'],
+		  template: `<div class='item' :style="{ fontSize: a + 'em' }"><p>{{todo.title}}</p>
+		  			<div>{{todo.con}}</div>
+		  			<button @click='$emit("changefs", 0.5)'>放大一点点</button>
+		  			</div>
+		  			
+		  `
+		})
+		var vm = new Vue({
+			data: {
+				message: '',
+				message02: '',
+				checked: true,
+				title: '123',
+				todos: [{
+					title: 'title1',
+					con: 'con1'
+				},{
+					title: 'title2',
+					con: 'con2'
+				},{
+					title: 'title3',
+					con: 'con3'
+				}],
+				postFontSize: 1
+			}
+		}).$mount("#app")
+	</script>
+</html>

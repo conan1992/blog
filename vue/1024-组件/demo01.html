@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<button-counter></button-counter>
+			<button-counter></button-counter>
+		</div>
+	</body>
+	<script>
+		Vue.component('button-counter', {
+		  data: function () {
+		    return {
+		      count: 0
+		    }
+		  },
+		  template: '<button v-on:click="count++">You clicked me {{ count }} times.</button>'
+		})
+		var vm = new Vue({
+			data: {
+				message: '',
+				message02: '',
+				checked: true
+			}
+		}).$mount("#app")
+	</script>
+</html>

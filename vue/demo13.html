@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/vue.js"></script>
+		<style>
+			.abc {
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<ul>
+				
+				<template v-for="todo in todos" v-if="todo%2===0">
+					<li :class="abc">{{todo}}</li>
+				</template>
+			</ul>
+			
+		</div>
+	</body>
+	<script>
+		var vm= new Vue({
+			el: "#app",
+			data: {
+				ok: true,
+				loginType: 'username',
+				todos: [1,2,3,4,5],
+				abc: 'abc'
+			},
+			methods: {
+				change: function(){
+					this.loginType= this.loginType == 'username' ? '': 'username'
+				}
+			}
+		})
+	</script>
+</html>

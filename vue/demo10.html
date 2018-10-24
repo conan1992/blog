@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<!--<script src="https://unpkg.com/vue/dist/vue.js"></script>
+		<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>-->
+		<script src="js/vue.js"></script>
+		<script src="js/vue-router.js"></script>
+		<style>
+			.active {
+				background: #eee;
+			}
+			.isError{
+				color: red;
+			}
+			.green {
+				color: yellow;
+			}
+			.hehe {
+				color: greenyellow;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<div :class="b">测试</div>
+			<div :class="[{active: active},hehe]">测试2222</div>
+		</div>
+		
+	</body>
+	<script>
+		var vm = new Vue({
+			data: {
+				active: true,
+				isError: true,
+				a: {
+					active: true,
+					isError: true,
+				},
+				hehe: "hehe"
+			},
+			computed: {
+				b: function(){
+					return {
+				    	active: true,
+						green: true,
+				    }
+				}
+			}
+		}).$mount("#app")
+		
+
+	</script>
+</html>

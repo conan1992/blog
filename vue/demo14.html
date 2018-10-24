@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/vue.js"></script>
+		<style>
+			.abc {
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div id="app">
+			<input v-model="content" placeholder="请输入"/>
+			<button @click="addItem">点击添加</button>
+			<ul>
+				
+				<todo-item v-for="todo,index in todos" :title="todo.title" :index="index" :remove="remove"></todo-item>
+			</ul>
+			<button @click="add(6,$event)">add</button>
+		</div>
+	</body>
+	<script>
+		Vue.component('todo-item',{
+			template: `
+				<li>
+					<span>{{title}}</span>
+					<button @click="remove(index)">移除</button>
+				</li>
+			`,
+			props:['title','index','remove']
+		})
+		var vm= new Vue({
+			el: "#app",
+			data: {
+				content: '',
+				now: 4,
+				todos: [{
+					id:1,
+					title: "a"
+				},{
+					id:2,
+					title: "b"
+				},{
+					id:3,
+					title: "c"
+				}],
+				
+			},
+			methods: {
+				addItem: function(){
+					if(this.content){
+						this.todos.push({
+							id: this.now,
+							title: this.content
+						});
+						this.now++;
+						this.content = '';
+					}else{
+						alert("内容不能为空~")
+					}
+				},
+				remove: function(num){
+					console.log(num);
+					this.todos.splice(num,1)
+				},
+				add: function(a,event){
+					alert(event.target.tagName+a)
+				}
+			}
+		})
+	</script>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<!--<script src="https://unpkg.com/vue/dist/vue.js"></script>
+		<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>-->
+		<script src="js/vue.js"></script>
+		<script src="js/vue-router.js"></script>
+		<style>
+			.active {
+				background: #eee;
+			}
+			.isError{
+				color: red;
+			}
+			.green {
+				color: yellow;
+			}
+			.hehe {
+				color: greenyellow;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<test class="a" :class="c"></test>
+			<p :style="{color: red, 'font-size': fz}">你好呀，这礼拜双休吧</p>
+			<span v-bind:style="styleJson">span</span>
+		</div>
+		
+	</body>
+	<script>
+		Vue.component('test',{
+			template: "<p class='heihei'>我是p标签</p>"
+		})
+		var vm = new Vue({
+			data: {
+				active: true,
+				isError: true,
+				a: {
+					active: true,
+					isError: true,
+				},
+				c: 'c',
+				hehe: "hehe",
+				red: 'red',
+				fz: '20px',
+				styleJson: {
+					color: 'green',
+					'font-size': '30px'
+				}
+			},
+			computed: {
+				b: function(){
+					return {
+				    	active: true,
+						green: true,
+				    }
+				}
+			}
+		}).$mount("#app")
+		
+
+	</script>
+</html>

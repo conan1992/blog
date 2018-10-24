@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<!--<script src="https://unpkg.com/vue/dist/vue.js"></script>
+		<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>-->
+		<script src="js/vue.js"></script>
+		<script src="js/vue-router.js"></script>
+		<style>
+			
+			
+		</style>
+	</head>
+	<body>
+		<div id="app" :title="time">
+			<h3>{{message}}</h3>
+			<ul>
+			<li v-for="todo in todos">{{todo.text}}</li>
+			</ul>
+			<p v-if="seen">你看到我啦</p>
+			<button v-on:click="reverseMessage">反向操作</button>
+			<p><input type="text" v-model="message" /></p>
+			<ol>
+				<todo-item v-for="todo in todos" v-bind:todo="todo"></todo-item>
+			</ol>
+			<fuck name="脑残"></fuck>
+		</div>
+		
+	</body>
+	<script>
+		const message = "我是msg";
+		const a = Vue.component('todo-item', {
+				props: ["todo"],
+				template: '<li>{{todo.text}}</li>'
+			}
+		);
+		Vue.component('fuck', {
+				props: ['name'],
+				template: '<p>what a {{name}}</p>'
+			}
+		)
+		var app = new Vue({
+			//el: '#app',
+			data: {
+				message,
+				name: "消息",
+				time: "现在时间是："+new Date().toLocaleString(),
+				todos: [
+					{ text: '学习 JavaScript' },
+				    { text: '学习 Vue' },
+				    { text: '整个牛项目' }
+				],
+				seen: false
+			},
+			methods: {
+				reverseMessage: function(){
+					this.message = this.message.split('').reverse().join('')
+				}
+			}
+		}).$mount("#app");
+		
+
+	</script>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<!--<script src="https://unpkg.com/vue/dist/vue.js"></script>
+		<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>-->
+		
+		<script type="text/javascript" src="js/vue.js" ></script>
+		<script src="js/vue-router.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<router-link :to="{ name:'user',params: { userId: 123 }}">点我</router-link>
+			<router-view></router-view>
+		</div>
+	</body>
+	<script>
+		
+		const User = {
+		  template: `
+		    <div class="user">
+		      <h2>User {{ $route.params.userId }}</h2>
+		    </div>
+		  `
+		}
+		const router = new VueRouter({
+		//mode: 'history',
+		  routes: [
+		    { 
+		    	name: 'user',
+		    	path: '/user/:userId',
+		    	component: User
+		    }
+		  ]
+		})
+		const app = new Vue({
+		  router
+		}).$mount('#app')
+	</script>
+</html>
