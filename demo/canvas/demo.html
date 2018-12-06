@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			canvas {
+				opacity: 0.3;
+			}
+		</style>
+	</head>
+	<body>
+		<div style="width: 60px; margin:0 auto; background: red;height: 60px; border-radius: 50%; margin-top: 100px;">123</div>
+		<canvas id="oc" width="500" height="300"></canvas>
+	</body>
+	<script>
+		var oc = document.getElementById("oc");
+		var currentPoint = null;
+		var max_distance = 80;
+		var windowW = document.documentElement.clientWidth;
+		var windowH = document.documentElement.clientHeight;
+		oc.width = windowW;
+		oc.height = windowH
+		oc.style = "position: fixed;top:0; left: 0;z-index:-1;"
+		ocx = oc.getContext("2d");
+		var all_points;
+		window.onmouseover = function(event){
+			
+			currentPoint = new Point(event.clientX,event.clientY)
+			all_points = [...points,currentPoint];
+		}
+		window.onmousemove = function(event){
+			
+			currentPoint = new Point(event.clientX,event.clientY);
+			currentPoint.set();
+			all_points = [...points,currentPoint];
+		}
+		window.onmousemout = function(event){
+			alert(0)
+			all_points = [...points];
+		}
+		function Point(x,y){
+			this.x = x;
+			this.y = y;
+			this.r = 5*Math.random()
+			this.sx = Math.random() * 1 - .5
+			this.sy = Math.random() * 1 - .5
+		}
+		Point.prototype.set = function(){
+			this.r = 2;
+		}
+		Point.prototype.setX = function(x){
+			this.x = x;
+		}
+		Point.prototype.setY = function(y){
+			this.y = y;
+		}
+		function init(num){
+			var len = num ? num : 40 ;
+			
+			var points = []
+			for(var i=0;i<len;i++){
+				points.push(new Point(windowW*Math.random(),windowH*Math.random()))
+			}
+			return points;
+		}
+		Point.prototype.move = function(){
+			this.x += this.sx;
+			this.y += this.sy;
+			if(this.x>=windowH){
+				this.sx = -this.sx;
+			}else if(this.x<=0){
+				this.sx = -this.sx;
+			}
+			if(this.y>=windowW){
+				this.sy = -this.sy;
+			}else if(this.y<=0){
+				this.sy = -this.sy;
+			}
+		}
+		var points = init(100);
+		all_points = [...points]
+		function loop(){
+			ocx.clearRect(0,0,windowW,windowH);
+			
+			for(var i=0;i<all_points.length;i++){
+				item=all_points[i]
+				if(item!==currentPoint){
+					item.move();
+				}
+				
+				draw(item);
+				for(var j=i+1;j<all_points.length;j++){
+					var px = item.x - all_points[j].x;
+					var py = item.y - all_points[j].y
+					var distance = Math.sqrt(px*px+py*py)
+					
+					if((all_points[j] === currentPoint )&&distance<120&&distance>(120/2)){
+						console.log(item.x- all_points[j].x)
+						item.setX(item.x-0.03 *(item.x- currentPoint.x));
+						item.setY(item.y-0.03 *(item.y- currentPoint.y));
+						
+					}
+					//distance < 120 && (item === currentPoint && distance >= 120 / 2 && 
+					if( distance<max_distance ){
+						ocx.beginPath()
+						ocx.moveTo(item.x, item.y)
+						ocx.lineTo(all_points[j].x, all_points[j].y)
+						ocx.closePath()
+						var alpha = (max_distance-distance)/max_distance
+						ocx.strokeStyle = 'rgba(170, 170, 170, ' + alpha + ')'
+						ocx.strokeWidth = 1
+						ocx.stroke()
+					}
+				}
+				
+			}
+			requestAnimationFrame(loop)
+			
+		}
+		function draw(point){
+			
+			ocx.beginPath();
+			ocx.arc(point.x,point.y,point.r,0,2 * Math.PI);
+			ocx.closePath()
+			ocx.fillStyle = '#01AAED'
+			ocx.fill()
+		}
+		loop();
+	</script>
+</html>
