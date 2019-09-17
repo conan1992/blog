@@ -17,25 +17,6 @@
 		年：<span></span><br>月：<span></span><br>日：<span></span>
 	</body>
 	<script>
-		var regex = /(\d{1,4})([\n-/])(0?[1-9]|[1][0-2])\2(0?[1-9]|[12][0-9]|3[0-1])/
-		var btn = document.querySelector('button');
-		var inp = document.querySelector('input');
-		var spans = document.querySelectorAll('span');
-		
-		btn.onclick = function(){
-			var val = inp.value;
-			if(!val){
-				alert('不能为空')
-			}else if( !regex.test( val ) ){
-				alert('日期格式不对')
-			}else{
-				var result = val.match(regex);
-				console.log(result)
-				spans[0].innerHTML = result[1];
-				spans[1].innerHTML = result[3];
-				spans[2].innerHTML = result[4];
-			}
-		}
 		
 	</script>
 </html>
