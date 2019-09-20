@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>插入排序</title>
+	</head>
+
+	<body>
+		
+		
+	</body>
+	<script>
+		//原理：从有序序列的尾部开始，逐个与目标元素比较，如果大于目标元素，该元素需要后移。
+		let arr = [5,4,2,1,3];
+		
+		for(let i=0;i<arr.length;i++){
+			let target = arr[i];
+			let j=i;
+			while(j>0 && arr[j-1]>target){
+				arr[j] = arr[j-1];
+				j--;
+			}
+			arr[j] = target;
+		}
+		console.log(arr)
+	</script>
+</html>
