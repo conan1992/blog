@@ -1,6 +1,3 @@
-# demo
-test
-## canvas粒子效果
 #### [1.数组去重方法](https://github.com/conan1992/blog/issues/2)
 #### [2.数组扁平化](https://github.com/conan1992/blog/issues/3)
 #### [3.发布-订阅模式：实现EventEmitter](https://github.com/conan1992/blog/issues/4)
