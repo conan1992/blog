@@ -6,3 +6,4 @@
 5. [模拟call、apply的实现](https://github.com/conan1992/blog/issues/6)
 6. [深拷贝实现](https://github.com/conan1992/blog/issues/7)
 7. [惰性函数](https://github.com/conan1992/blog/issues/8)
+8. [new模拟实现](https://github.com/conan1992/blog/issues/9)
