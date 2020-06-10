@@ -9,3 +9,4 @@
 8. [new模拟实现](https://github.com/conan1992/blog/issues/9)
 9. [call、apply函数的实现](https://github.com/conan1992/blog/issues/10)
 10. [bind函数的模拟实现](https://github.com/conan1992/blog/issues/11)
+11. [防抖函数](https://github.com/conan1992/blog/issues/12)
