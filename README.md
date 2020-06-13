@@ -13,3 +13,4 @@
 
 ### VUE
 1. [理解vue响应式原理(1)--relative](https://github.com/conan1992/blog/issues/13)
+2. [理解vue响应式原理(2)--computed](https://github.com/conan1992/blog/issues/14)
