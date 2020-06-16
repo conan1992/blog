@@ -20,3 +20,4 @@
 1. [HTML4和HTML5不同点](https://github.com/conan1992/blog/issues/15)
 2. [meta标签属性](https://github.com/conan1992/blog/issues/15)
 3. [src和href的区别](https://github.com/conan1992/blog/issues/16)
+4. [script标签中defer和async的区别](https://github.com/conan1992/blog/issues/17)
