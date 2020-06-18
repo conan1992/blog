@@ -29,3 +29,4 @@
 4. [布局题：div垂直居中，左右10px，高度始终为宽度一半](https://github.com/conan1992/blog/issues/23)
 5. [css品字布局](https://github.com/conan1992/blog/issues/24)
 6. [css圣杯布局](https://github.com/conan1992/blog/issues/26)
+7. [css双飞翼布局](https://github.com/conan1992/blog/issues/27)
