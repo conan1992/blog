@@ -10,7 +10,7 @@
 9. [call、apply函数的实现](https://github.com/conan1992/blog/issues/10)
 10. [bind函数的模拟实现](https://github.com/conan1992/blog/issues/11)
 11. [防抖函数](https://github.com/conan1992/blog/issues/12)
-
+12. [树结构数据查找](https://github.com/conan1992/blog/issues/25)
 ### VUE
 1. [理解vue响应式原理(1)--relative](https://github.com/conan1992/blog/issues/13)
 2. [理解vue响应式原理(2)--computed](https://github.com/conan1992/blog/issues/14)
