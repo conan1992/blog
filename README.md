@@ -31,4 +31,6 @@
 6. [css圣杯布局](https://github.com/conan1992/blog/issues/26)
 7. [css双飞翼布局](https://github.com/conan1992/blog/issues/27)
 8. [BFC](https://github.com/conan1992/blog/issues/28)
-9. [JS数据类型](https://github.com/conan1992/blog/issues/29)
+
+### JavaScript
+1. [JS数据类型](https://github.com/conan1992/blog/issues/29)
