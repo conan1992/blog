@@ -36,3 +36,4 @@
 1. [JS数据类型](https://github.com/conan1992/blog/issues/29)
 2. [JS数据类型检测](https://github.com/conan1992/blog/issues/30)
 3. [JS数据类型转换](https://github.com/conan1992/blog/issues/31)
+4. [作用域、作用域链、闭包](https://github.com/conan1992/blog/issues/32)
