@@ -40,3 +40,4 @@
 5. [原型链](https://github.com/conan1992/blog/issues/33)
 6. [JS创建对象的几种方式](https://github.com/conan1992/blog/issues/34)
 7. [JS继承的几种方法](https://github.com/conan1992/blog/issues/35)
+8. [JS类数组对象、arguments](https://github.com/conan1992/blog/issues/36)
