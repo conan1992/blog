@@ -43,3 +43,4 @@
 8. [JS类数组对象、arguments](https://github.com/conan1992/blog/issues/36)
 9. [数组map方法模拟实现](https://github.com/conan1992/blog/issues/37)
 10. [数组reduce方法模拟实现](https://github.com/conan1992/blog/issues/38)
+11. [数组filter方法模拟实现](https://github.com/conan1992/blog/issues/39)
