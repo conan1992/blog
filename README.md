@@ -46,6 +46,6 @@
 11. [数组filter方法模拟实现](https://github.com/conan1992/blog/issues/39)
 12. [数组push、pop方法模拟实现](https://github.com/conan1992/blog/issues/40)
 13. [EventLoop 宏任务 微任务](https://github.com/conan1992/blog/issues/41)
-
+14. [异步编程](https://github.com/conan1992/blog/issues/43)
 ### 前端工程化
 1. [Babel](https://github.com/conan1992/blog/issues/42)
