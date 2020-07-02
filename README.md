@@ -47,5 +47,6 @@
 12. [数组push、pop方法模拟实现](https://github.com/conan1992/blog/issues/40)
 13. [EventLoop 宏任务 微任务](https://github.com/conan1992/blog/issues/41)
 14. [异步编程](https://github.com/conan1992/blog/issues/43)
+15. [模拟实现Promise](https://github.com/conan1992/blog/issues/44)
 ### 前端工程化
 1. [Babel](https://github.com/conan1992/blog/issues/42)
