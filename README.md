@@ -56,3 +56,4 @@
 
 ### 前端性能
 1. [缓存](https://github.com/conan1992/blog/issues/47)
+2. [浏览器本地存储](https://github.com/conan1992/blog/issues/48)
