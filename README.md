@@ -54,6 +54,8 @@
 1. [Babel](https://github.com/conan1992/blog/issues/42)
 2. [webpack搭建vue项目](https://github.com/conan1992/blog/issues/46)
 3. [webpack-externals外部扩展](https://github.com/conan1992/blog/issues/53)
+4. [自定义webpack-plugin](https://github.com/conan1992/blog/issues/54)
+
 ### 前端性能
 1. [缓存](https://github.com/conan1992/blog/issues/47)
 2. [浏览器本地存储](https://github.com/conan1992/blog/issues/48)
