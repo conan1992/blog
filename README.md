@@ -61,3 +61,7 @@
 2. [浏览器本地存储](https://github.com/conan1992/blog/issues/48)
 3. [图片懒加载](https://github.com/conan1992/blog/issues/49)
 4. [页面渲染](https://github.com/conan1992/blog/issues/51)
+
+### 计算机基础
+1. [数据结构](https://github.com/conan1992/blog/issues/55)
+2. [算法](https://github.com/conan1992/blog/issues/56)
