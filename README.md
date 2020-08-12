@@ -65,3 +65,6 @@
 ### 计算机基础
 1. [数据结构](https://github.com/conan1992/blog/issues/55)
 2. [算法](https://github.com/conan1992/blog/issues/56)
+
+### 前端安全
+1. [XSS攻击](https://github.com/conan1992/blog/issues/60)
