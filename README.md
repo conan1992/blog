@@ -49,7 +49,7 @@
 14. [异步编程](https://github.com/conan1992/blog/issues/43)
 15. [模拟实现Promise](https://github.com/conan1992/blog/issues/44)
 16. [Promise 相关面试题](https://github.com/conan1992/blog/issues/45)
-
+17. [websocket重连](https://github.com/conan1992/blog/issues/61)
 ### 前端工程化
 1. [Babel](https://github.com/conan1992/blog/issues/42)
 2. [webpack搭建vue项目](https://github.com/conan1992/blog/issues/46)
