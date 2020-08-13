@@ -68,3 +68,4 @@
 
 ### 前端安全
 1. [XSS攻击](https://github.com/conan1992/blog/issues/60)
+2. [CSRF攻击](https://github.com/conan1992/blog/issues/62)
