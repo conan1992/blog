@@ -71,6 +71,8 @@
 6. [双向链表](https://github.com/conan1992/blog/issues/66)
 7. [集合结构](https://github.com/conan1992/blog/issues/67)
 8. [哈希表](https://github.com/conan1992/blog/issues/68)
+9. [二叉搜索树](https://github.com/conan1992/blog/issues/69)
+
 ### 前端安全
 1. [XSS攻击](https://github.com/conan1992/blog/issues/60)
 2. [CSRF攻击](https://github.com/conan1992/blog/issues/62)
