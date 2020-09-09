@@ -15,7 +15,7 @@
 1. [理解vue响应式原理(1)--relative](https://github.com/conan1992/blog/issues/13)
 2. [理解vue响应式原理(2)--computed](https://github.com/conan1992/blog/issues/14)
 3. [理解vue响应式原理(3)--watch](https://github.com/conan1992/blog/issues/15)
-
+4. [vue简易store](https://github.com/conan1992/blog/issues/71)
 ### HTML
 1. [HTML4和HTML5不同点](https://github.com/conan1992/blog/issues/16)
 2. [meta标签属性](https://github.com/conan1992/blog/issues/17)
@@ -76,3 +76,6 @@
 ### 前端安全
 1. [XSS攻击](https://github.com/conan1992/blog/issues/60)
 2. [CSRF攻击](https://github.com/conan1992/blog/issues/62)
+
+### TypeScript
+1. [函数](https://github.com/conan1992/blog/issues/70)
