@@ -1,0 +1,28 @@
+{
+  "name": "vue3_myself",
+  "version": "1.0.0",
+  "description": "采用vebpack自己搭建vue3.x项目",
+  "main": "./src/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack serve"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "叶城宇",
+  "license": "ISC",
+  "devDependencies": {
+    "@vue/compiler-sfc": "^3.0.5",
+    "css-loader": "^5.0.1",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^4.5.1",
+    "vue-loader": "^16.1.2",
+    "webpack": "^5.19.0",
+    "webpack-cli": "^4.4.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "vue": "^3.0.5"
+  }
+}
